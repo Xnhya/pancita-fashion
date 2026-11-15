@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:pancita_test;MODE=MySQL;DB_CLOSE_DELAY=-1
+    username: sa
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    defer-datasource-initialization: true
+  sql:
+    init:
+      mode: always
+
+gemini:
+  api-key: ""
