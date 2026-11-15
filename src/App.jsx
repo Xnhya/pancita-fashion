@@ -902,7 +902,7 @@ function StoreSection() {
                 <Icon name="mapPin" size={20} />
               </span>
               <div>
-                <strong>Dirección principal</strong>
+                <strong>Dirección y Puestos Oficiales</strong>
                 <p>{store.address || store.location}</p>
                 {store.reference && <small className="store-ref-text">{store.reference}</small>}
               </div>
@@ -1052,7 +1052,10 @@ function StoreSection() {
                     </div>
 
                     <div className="popup-card-body">
-                      <h4 className="popup-title">{store.name}</h4>
+                      <div className="popup-title-row">
+                        <h4 className="popup-title">{store.name}</h4>
+                        <span className="popup-stand-pill">{store.stand}</span>
+                      </div>
                       <p className="popup-address">
                         <Icon name="mapPin" size={14} />
                         <span>{store.address || store.location}</span>
@@ -1096,7 +1099,7 @@ function StoreSection() {
             <div className="store-map-toolbar">
               <span className="map-status-chip">
                 <span className="status-dot" aria-hidden="true" />
-                <span>Av. Grau 533 · Lima</span>
+                <span>Tienda C1 337-339 · Av. Grau 533</span>
               </span>
 
               <div className="map-toolbar-actions">
@@ -1169,7 +1172,7 @@ function Footer({ onNavigate }) {
           <Icon name="heart" size={20} /> {store.name}
         </button>
         <span>Contigo en cada etapa.</span>
-        <span>Fronteras Unidas de Grau · Cercado de Lima</span>
+        <span>Tienda C1 337-338-339 · C.C. Fronteras Unidas · Cercado de Lima</span>
       </div>
     </footer>
   )
@@ -1497,8 +1500,8 @@ function OrderMessage({ products = [], cart, total, name, note, order, unsaved, 
                   <strong className="meta-val price-val">{currency.format(orderTotal)}</strong>
                 </div>
                 <div className="meta-item location-item">
-                  <span className="meta-label">Local de recojo</span>
-                  <span className="meta-val-location">{store.location}</span>
+                  <span className="meta-label">Local y Puestos de recojo</span>
+                  <span className="meta-val-location"><strong>{store.stand}</strong> · {store.location}</span>
                 </div>
               </div>
             </div>

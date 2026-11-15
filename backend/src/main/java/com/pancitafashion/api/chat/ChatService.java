@@ -19,7 +19,7 @@ public class ChatService {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(ChatService.class);
     private static final String STORE_LOCATION =
-            "Centro Comercial Fronteras Unidas de Grau (Av. Miguel Grau 533), Cercado de Lima, Perú";
+            "Centro Comercial Fronteras Unidas de Grau, Tienda C1 337-338-339 (Av. Miguel Grau 533), Cercado de Lima, Perú";
     private static final String BUSINESS_OFFTOPIC_REFUSAL =
             "Solo puedo responder preguntas sobre Pancita Fashion, nuestras prendas de maternidad, catálogo, horarios y pedidos. ¿En qué te puedo asesorar sobre nuestra tienda?";
     private static final String SYSTEM_INSTRUCTIONS = """
@@ -29,7 +29,7 @@ public class ChatService {
             1. ÁMBITO EXCLUSIVO: Solo debes responder preguntas directamente relacionadas con Pancita Fashion:
                - Prendas de maternidad y lactancia de nuestro catálogo (vestidos, blusas, pantalones, ropa de descanso, enterizos).
                - Tallas, colores, telas, cuidados de las prendas y precios en PEN.
-               - Ubicación del local físico (C.C. Fronteras Unidas de Grau, Av. Miguel Grau 533, Lima) y horarios de atención.
+               - Ubicación del local físico (C.C. Fronteras Unidas de Grau, Tienda C1 337-338-339, Av. Miguel Grau 533, Lima) y horarios de atención.
                - Cómo hacer pedidos en la web, Fast Pickup (recojo en tienda) y confirmación por WhatsApp.
 
             2. REGLA INQUEBRANTABLE - PROHIBIDO RESPONDER PREGUNTAS AJENAS AL NEGOCIO:
