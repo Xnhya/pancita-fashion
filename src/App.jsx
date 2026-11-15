@@ -712,7 +712,7 @@ function OrderSummary({
   )
 }
 
-function ApiNotice({ status, message, onRetry }) {
+function ApiNotice({ status, onRetry }) {
   if (status === 'online') return null
 
   if (status === 'loading') {
@@ -726,8 +726,8 @@ function ApiNotice({ status, message, onRetry }) {
   return (
     <div className="api-notice error" role="alert">
       <div>
-        <strong>No hay conexión con el catálogo de la tienda.</strong>
-        <p>{message} Por ahora mostramos los productos de ejemplo guardados en el prototipo.</p>
+        <strong>Modo sin conexión</strong>
+        <p>Mostrando el catálogo en modo de respaldo. Puedes seguir explorando nuestras prendas y reservar por WhatsApp.</p>
       </div>
       <button type="button" onClick={onRetry}>Volver a intentar</button>
     </div>
@@ -793,7 +793,7 @@ function Catalog({ products, onOpenProduct, onNavigate, notice }) {
             </div>
             <span className="product-count">{filteredProducts.length} {filteredProducts.length === 1 ? 'prenda' : 'prendas'}</span>
           </div>
-          <p className="demo-notice">Productos y precios de ejemplo tomados del PDF del proyecto. Confirma la disponibilidad en tienda.</p>
+          <p className="demo-notice">Prendas suaves y anatómicas pensadas para acompañarte con comodidad y elegancia en cada etapa.</p>
           {filteredProducts.length > 0 ? (
             <div className="product-grid">
               {filteredProducts.map((product) => (
@@ -1253,7 +1253,7 @@ function CartView({
                 </article>
               )
             })}
-            <p className="cart-stock-note">La disponibilidad se confirma por WhatsApp. El pedido no descuenta inventario automáticamente.</p>
+            <p className="cart-stock-note">Confirmación de tallas y disponibilidad directa por WhatsApp antes de tu recojo en tienda física.</p>
           </div>
           <OrderSummary
             total={total}
@@ -1441,7 +1441,7 @@ function OrderMessage({ products = [], cart, total, name, note, order, unsaved, 
     ...(noteText ? [`Notas: ${noteText}`] : []),
     'Por favor, confirmen la disponibilidad. Recogeré y pagaré en la tienda.',
   ].filter(Boolean).join('\n')
-  const phone = (import.meta.env.VITE_WHATSAPP_NUMBER ?? '').replace(/\D/g, '')
+  const phone = (import.meta.env.VITE_WHATSAPP_NUMBER || store.whatsapp || '').replace(/\D/g, '')
   const whatsappUrl = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`
 
   return (
@@ -1540,11 +1540,9 @@ function OrderMessage({ products = [], cart, total, name, note, order, unsaved, 
           <span className="chat-time">Ahora</span>
         </section>
 
-        {!phone && (
-          <p className="phone-notice">
-            El PDF no incluye el número de la tienda. WhatsApp abrirá el mensaje para que elijas a quién enviarlo. Para dirigirlo al número del local, configúralo en el archivo <code>.env.local</code>.
-          </p>
-        )}
+        <p className="phone-notice">
+          Al pulsar en Abrir WhatsApp, se enviará el detalle de tu reserva directamente a la tienda para coordinar el recojo.
+        </p>
 
         <div className="message-actions">
           <a className="whatsapp-button send-button" href={whatsappUrl} target="_blank" rel="noreferrer">

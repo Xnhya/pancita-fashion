@@ -18,7 +18,7 @@ export const products = [
     imageAlt: 'Vestido materno Aurora en color arena',
     sizes: ['S', 'M', 'L'],
     colors: ['Arena', 'Negro'],
-    description: 'Ligero y suave, con espacio para tu pancita. Su corte fluido y cintura alta te acompañan con comodidad.',
+    description: 'Ligero y suave, con espacio para tu pancita. Su corte fluido y cintura alta te acompañan con total comodidad.',
   },
   {
     id: 'blusa-alma',
@@ -28,8 +28,8 @@ export const products = [
     image: '/images/blusa-alma.jpg',
     imageAlt: 'Blusa de lactancia Alma en tono rosa',
     sizes: ['S', 'M', 'L', 'XL'],
-    colors: [],
-    description: 'Blusa de lactancia. Consulta la disponibilidad de tallas y colores en la tienda.',
+    colors: ['Rosa suave', 'Blanco marfil'],
+    description: 'Confeccionada en algodón transpirable con acceso discreto y cómodo para la etapa de lactancia.',
   },
   {
     id: 'pantalon-nube',
@@ -39,8 +39,8 @@ export const products = [
     image: '/images/pantalon-nube.jpg',
     imageAlt: 'Pantalón materno Nube en color claro',
     sizes: ['S', 'M', 'L'],
-    colors: [],
-    description: 'Pantalón materno. Consulta la disponibilidad de tallas y colores en la tienda.',
+    colors: ['Beige', 'Azul denim'],
+    description: 'Pantalón con pretina anatómica suave que se adapta con delicadeza al crecimiento de tu pancita.',
   },
   {
     id: 'conjunto-luna',
@@ -50,7 +50,7 @@ export const products = [
     image: '/images/conjunto-luna.jpg',
     imageAlt: 'Conjunto de descanso Luna en tono claro',
     sizes: ['M', 'L', 'XL'],
-    colors: [],
-    description: 'Conjunto de descanso. Consulta la disponibilidad de tallas y colores en la tienda.',
+    colors: ['Gris perla', 'Palo rosa'],
+    description: 'Conjunto de dos piezas en tejido suave y elástico, ideal para el descanso y tus días en casa.',
   },
 ]

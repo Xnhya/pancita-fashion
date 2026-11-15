@@ -130,7 +130,7 @@ INSERT INTO productos (
   (
     'blusa-alma',
     'Blusa lactancia Alma',
-    'Blusa de lactancia. Consulta la disponibilidad de tallas y colores en la tienda.',
+    'Confeccionada en algodón transpirable con acceso discreto y cómodo para la etapa de lactancia.',
     69.00,
     'PEN',
     '/images/blusa-alma.jpg',
@@ -139,7 +139,7 @@ INSERT INTO productos (
   (
     'pantalon-nube',
     'Pantalón materno Nube',
-    'Pantalón materno. Consulta la disponibilidad de tallas y colores en la tienda.',
+    'Pantalón con pretina anatómica suave que se adapta con delicadeza al crecimiento de tu pancita.',
     79.00,
     'PEN',
     '/images/pantalon-nube.jpg',
@@ -148,7 +148,7 @@ INSERT INTO productos (
   (
     'conjunto-luna',
     'Conjunto descanso Luna',
-    'Conjunto de descanso. Consulta la disponibilidad de tallas y colores en la tienda.',
+    'Conjunto de dos piezas en tejido suave y elástico, ideal para el descanso y tus días en casa.',
     99.00,
     'PEN',
     '/images/conjunto-luna.jpg',

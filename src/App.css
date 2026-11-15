@@ -409,9 +409,10 @@
 }
 
 .demo-notice {
-  margin: 12px 0 18px;
+  margin: 8px 0 20px;
   color: var(--muted);
-  font-size: 11px;
+  font-size: 13.5px;
+  line-height: 1.5;
 }
 
 .product-grid {

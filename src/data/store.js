@@ -6,4 +6,6 @@ export const store = {
   schedule: 'Lunes a Sábado: 10:00 am - 7:00 pm',
   lat: -12.057778,
   lng: -77.027222,
+  whatsapp: '+51 987 654 321',
+  phone: '+51 987 654 321',
 }
